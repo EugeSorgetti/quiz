@@ -1,7 +1,7 @@
 :root {
     font-size: 62.5%;
     --text-colour: #333;
-    --title-colour: #56a5eb;
+    --title-colour: #db32e0;
     --bg-colour: #ecf5ff;
 }
 
@@ -184,14 +184,14 @@ input::placeholder {
 #progressBar {
     width: 20rem;
     height: 3rem;
-    border: 0.3rem solid #56a5eb;
+    border: 0.3rem solid var(--title-colour);
     border-radius: 2rem;
     margin: 2rem;
 }
 
 #progressBarFull {
     height: 2.4rem;
-    background-color: #56a5eb;
+    background-color: var(--title-colour);
     border-radius: 1rem;
     width: 0%;
 }
@@ -211,4 +211,23 @@ input::placeholder {
 
 .highScore:hover {
     transform: scale(1.025);
+}
+
+#loader {
+    border: 1.6rem solid white;
+    border-radius: 50%;
+    border-top: 1.6rem solid var(--title-colour);
+    width: 12rem;
+    height: 12rem;
+    animation: spin  2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
